@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="3 3 48 48">
+    <defs>
+        <filter id="prefix__a" width="141%" height="126.4%" x="-17.9%" y="-9.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.0175083246 0 0 0 0 0 0 0 0 0 0.377915534 0 0 0 0.6 0"/>
+        </filter>
+        <text id="prefix__b" fill="#FFF" font-family="AppleColorEmoji, Apple Color Emoji" font-size="40" font-weight="normal" letter-spacing="-1.867">
+            <tspan x="315.737" y="226">💫</tspan>
+        </text>
+    </defs>
+    <g fill="#FFF" fill-rule="evenodd" transform="translate(-312 -189)">
+        <use filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use xlink:href="#prefix__b"/>
+    </g>
+</svg>

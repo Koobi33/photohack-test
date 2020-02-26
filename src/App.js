@@ -1,24 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import arm from '../src/images/arm.svg';
+import arm2 from '../src/images/arm2.svg';
+import godzilla from '../src/images/godzilla.svg';
+import godzilla2 from '../src/images/godzilla2.svg';
+import bang from '../src/images/bang.svg';
+import boss_glasses from '../src/images/boss_glasses.svg';
+import hmm_emoji from '../src/images/hmm_emoji.svg';
+import in_love_emoji from '../src/images/in_love_emoji.svg';
+import leg from '../src/images/leg.svg';
+import leg3 from '../src/images/leg3.svg';
+import star from '../src/images/star.svg';
+import wow_emoji from '../src/images/wow_emoji.svg';
 
 function App() {
+  const [photoData, setPhotoData] = useState(null);
+  const handlePhoto = async () => {
+    const data = new FormData();
+    data.append('proverochka', photoData);
+    const params = {
+      headers: {
+        'ContentType': 'application/multipart/form-data'
+      }
+    };
+      const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload', data, params);
+  };
+  useEffect(() => {
+    axios.get('http://se.ws.pho.to:5000/api/photo/test');
+  }, []);
+  useEffect(() => {
+    if (photoData) {
+      handlePhoto();
+    }
+  }, [photoData]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content">
+      <div>
+        <img src={arm} className="arm" alt="logo" />
+        <img src={boss_glasses} className="boss_glasses" alt="logo" />
+        <img src={in_love_emoji} className="in_love_emoji" alt="logo" />
+        <img src={arm2} className="arm2" alt="logo" />
+        <img src={leg} className="leg" alt="logo" />
+        <img src={leg3} className="leg3" alt="logo" />
+        <img src={godzilla} className="godzilla" alt="logo" />
+        <img src={bang} className="bang" alt="logo" />
+        <img src={star} className="star" alt="logo" />
+        {/*<img src={godzilla2} className="godzilla2" alt="logo" />*/}
+        {/*<img src={star} className="star2" alt="logo" />*/}
+        <img src={hmm_emoji} className="hmm_emoji" alt="logo" />
+        <img src={wow_emoji} className="wow_emoji" alt="logo" />
+
+        {/*<input type="file" onChange={(e) => setPhotoData(e.target.files[0])} accept="image/*;capture=camera" ></input>*/}
+        <div className="content_container">
+          <p className='call_text'>
+            DON’T MISS<br/>
+            YOUR CHANCE<br/>
+            TO MESS UP<br/>
+            WITH GODZILLA!<br/>
+          </p>
+          <input
+            id="photo"
+            name="photo"
+            type="file"
+            onChange={(e) => setPhotoData(e.target.files[0])}
+            accept="image/*;capture=camera"
+            className="take_photo_button"
+          />
+          <label for="photo" className="take_photo_button__label">TAKE A PHOTO</label>
+        </div>
+      </div>
     </div>
   );
 }
