@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import arm from '../src/images/arm.svg';
-import arm2 from '../src/images/arm2.svg';
-import godzilla from '../src/images/godzilla.svg';
-import godzilla2 from '../src/images/godzilla2.svg';
-import bang from '../src/images/bang.svg';
-import boss_glasses from '../src/images/boss_glasses.svg';
-import hmm_emoji from '../src/images/hmm_emoji.svg';
-import in_love_emoji from '../src/images/in_love_emoji.svg';
-import leg from '../src/images/leg.svg';
-import leg3 from '../src/images/leg3.svg';
-import star from '../src/images/star.svg';
-import wow_emoji from '../src/images/wow_emoji.svg';
+import arm from '../src/images/arm.png';
+import arm2 from '../src/images/arm2.png';
+import godzilla from '../src/images/godzilla.png';
+import godzilla2 from '../src/images/godzilla2.png';
+import bang from '../src/images/bang.png';
+import boss_glasses from '../src/images/boss_glasses.png';
+import hmm_emoji from '../src/images/hmm_emoji.png';
+import in_love_emoji from '../src/images/in_love_emoji.png';
+import leg from '../src/images/leg.png';
+import leg2 from '../src/images/leg2.png';
+import star from '../src/images/star.png';
+import wow_emoji from '../src/images/wow_emoji.png';
 
 function App() {
   const [photoData, setPhotoData] = useState(null);
@@ -42,12 +42,12 @@ function App() {
         <img src={in_love_emoji} className="in_love_emoji" alt="logo" />
         <img src={arm2} className="arm2" alt="logo" />
         <img src={leg} className="leg" alt="logo" />
-        <img src={leg3} className="leg3" alt="logo" />
+        <img src={leg2} className="leg2" alt="logo" />
         <img src={godzilla} className="godzilla" alt="logo" />
         <img src={bang} className="bang" alt="logo" />
         <img src={star} className="star" alt="logo" />
-        {/*<img src={godzilla2} className="godzilla2" alt="logo" />*/}
-        {/*<img src={star} className="star2" alt="logo" />*/}
+        <img src={godzilla2} className="godzilla2" alt="logo" />
+        <img src={star} className="star2" alt="logo" />
         <img src={hmm_emoji} className="hmm_emoji" alt="logo" />
         <img src={wow_emoji} className="wow_emoji" alt="logo" />
 

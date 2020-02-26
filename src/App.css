@@ -37,8 +37,8 @@ time, mark, audio, video {
 }
 
 .arm {
-  /*height: 15vw;*/
-  /*width: 15vw;*/
+  height: 15vw;
+  width: 15vw;
   position: absolute;
   top: 0;
 }
@@ -66,18 +66,18 @@ time, mark, audio, video {
 }
 
 .godzilla {
-  height: 50vw;
+  height: 54vw;
   position: absolute;
-  top: 67vw;
-  right: 2vw;
+  top: 71vw;
+  right: 11vw;
 }
 
-/*.godzilla2 {*/
-/*  height: 25vw;*/
-/*  position: absolute;*/
-/*  bottom: 48vw;*/
-/*  right: 0;*/
-/*}*/
+.godzilla2 {
+  height: 25vw;
+  position: absolute;
+  bottom: 40vw;
+  right: 0;
+}
 
 .bang {
   height: 24vw;
@@ -97,17 +97,15 @@ time, mark, audio, video {
 .leg {
   height: 30vw;
   position: absolute;
-  top: 44vw;
+  top: 36vw;
   left: 3vw;
-  transform: rotate(90deg) scale(-1, 1)
 }
 
-.leg3 {
+.leg2 {
   height: 33vw;
   position: absolute;
-  top: 37vw;
+  top: 33vw;
   left: 32vw;
-  transform: rotate(0deg) scale(-1, 1)
 }
 
 .star {
@@ -117,13 +115,13 @@ time, mark, audio, video {
   right: 8vw;
 }
 
-/*.star2 {*/
-/*  height: 10vw;*/
-/*  position: absolute;*/
-/*  bottom: 71vw;*/
-/*  right: 8vw;*/
-/*  transform: rotate(100deg);*/
-/*}*/
+.star2 {
+  height: 10vw;
+  position: absolute;
+  bottom: 63vw;
+  right: 8vw;
+  transform: rotate(100deg);
+}
 
 .wow_emoji {
   height: 23vw;
