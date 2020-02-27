@@ -44,12 +44,15 @@ const WaitVideoPage = (props) => {
         <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
         <button className="take_photo_button__label" onClick={() =>
           `callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=shareVideo`}>
-          SHARE
+          SHARE1
+        </button>
+        <button className="take_photo_button__label" onClick={`callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=shareVideo`}>
+          SHARE2
         </button>
         <Router>
           <Link to={`callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=appShare`}
            className=" take_photo_button__label">
-          SHARE
+          SHARE3
           </Link>
         </Router>
       </div>)
