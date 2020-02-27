@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 import arm from '../images/arm.png';
 import boss_glasses from '../images/boss_glasses.png';
 import in_love_emoji from '../images/in_love_emoji.png';
@@ -55,6 +56,10 @@ const StartPage = (props) => {
             className="take_photo_button"
           />
           <label htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
+          <Router>
+          <Link className="upload-btn text-center"
+             to="callback:nativePhotoSelect?num_photos=4&amp;func=appUploaded">Choose photos</Link>
+          </Router>
         </div>
       </div>
     );

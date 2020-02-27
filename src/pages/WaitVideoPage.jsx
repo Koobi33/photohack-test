@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 import Loading from '../components/Loading';
 import './WaitVideoPage.css'
 import axios from 'axios';
@@ -45,6 +46,12 @@ const WaitVideoPage = (props) => {
           `callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=shareVideo`}>
           SHARE
         </button>
+        <Router>
+          <Link to={`callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=appShare`}
+           className=" take_photo_button__label">
+          SHARE
+          </Link>
+        </Router>
       </div>)
   );
 };
