@@ -1,0 +1,13 @@
+import React from 'react';
+import boss_glasses from '../images/boss_glasses.png';
+
+const Loading = () => {
+    return (
+      <div className="wait_page">
+        <img src={boss_glasses} className="loading" alt="logo"/>
+        <span className="call_text">THE BATTLE IS ON</span>
+      </div>
+    );
+};
+
+export default Loading;

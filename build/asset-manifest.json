@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d88e9c39.chunk.css",
+    "main.js": "/static/js/main.d75c3c2c.chunk.js",
+    "main.js.map": "/static/js/main.d75c3c2c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ae78184e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ae78184e.js.map",
+    "static/js/2.3673e42e.chunk.js": "/static/js/2.3673e42e.chunk.js",
+    "static/js/2.3673e42e.chunk.js.map": "/static/js/2.3673e42e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.72f9dc9337ac7bc418e792c752b6543d.js": "/precache-manifest.72f9dc9337ac7bc418e792c752b6543d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d88e9c39.chunk.css.map": "/static/css/main.d88e9c39.chunk.css.map",
+    "static/js/2.3673e42e.chunk.js.LICENSE.txt": "/static/js/2.3673e42e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Gilroy-Heavy.8d36efeb.ttf",
+    "static/media/arm.png": "/static/media/arm.8b54e9f2.png",
+    "static/media/arm2.png": "/static/media/arm2.42a66b67.png",
+    "static/media/bang.png": "/static/media/bang.ccf57901.png",
+    "static/media/boss_glasses.png": "/static/media/boss_glasses.910736e8.png",
+    "static/media/godzilla.png": "/static/media/godzilla.c0aa2d81.png",
+    "static/media/godzilla2.png": "/static/media/godzilla2.4f88fdb5.png",
+    "static/media/hmm_emoji.png": "/static/media/hmm_emoji.8723ad43.png",
+    "static/media/leg.png": "/static/media/leg.2a8086e8.png",
+    "static/media/leg2.png": "/static/media/leg2.b909c27b.png",
+    "static/media/star.png": "/static/media/star.ab24b616.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae78184e.js",
+    "static/js/2.3673e42e.chunk.js",
+    "static/css/main.d88e9c39.chunk.css",
+    "static/js/main.d75c3c2c.chunk.js"
+  ]
+}

@@ -1,6 +1,6 @@
 html, body, #root {
-  height: 101%;
-  width: 101%;
+  height: 100%;
+  width: 100%;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,6 +24,7 @@ time, mark, audio, video {
 }
 
 .content {
+  overflow: hidden;
   height: 100%;
   background: rgb(244,41,179);
   background: linear-gradient(160deg, rgba(244,41,179,1) 0%, rgba(54,82,194,1) 100%);
@@ -177,4 +178,17 @@ time, mark, audio, video {
 .take_photo_button__label:hover {
   background-color: whitesmoke;
   color: rgba(54,82,194,0.7);
+}
+
+.loading {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
