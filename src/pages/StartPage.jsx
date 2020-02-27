@@ -23,19 +23,20 @@ const StartPage = (props) => {
   }, [photoData]);
     return (
       <div>
-        <img src={arm} className="arm" alt="logo"/>
-        <img src={boss_glasses} className="boss_glasses" alt="logo"/>
-        <img src={in_love_emoji} className="in_love_emoji" alt="logo"/>
-        <img src={arm2} className="arm2" alt="logo"/>
-        <img src={leg} className="leg" alt="logo"/>
-        <img src={leg2} className="leg2" alt="logo"/>
-        <img src={godzilla} className="godzilla" alt="logo"/>
-        <img src={bang} className="bang" alt="logo"/>
-        <img src={star} className="star" alt="logo"/>
-        <img src={godzilla2} className="godzilla2" alt="logo"/>
-        <img src={star} className="star2" alt="logo"/>
+        <img src={arm} className="arm animated infinite bounce delay-1s" alt="logo"/>
+        <img src={boss_glasses} className="boss_glasses animated infinite pulse delay-1s" alt="logo"/>
+        <img src={in_love_emoji} className="in_love_emoji animated infinite shake delay-1s" alt="logo"/>
+        <img src={arm2} className="arm2 animated infinite bounce delay-1s" alt="logo"/>
+        <img src={leg} className="leg animated infinite swing delay-1s" alt="logo"/>
+        <img src={leg2} className="leg2 animated infinite swing delay-1s" alt="logo"/>
+        <img src={godzilla} className="godzilla animated infinite wobble delay-1s" alt="logo"/>
+        <img src={bang} className="bang animated infinite heartBeat delay-1s" alt="logo"/>
+        <img src={star} className="star animated infinite wobble delay-1s" alt="logo"/>
+        <img src={godzilla2} className="godzilla2 animated infinite bounce " alt="logo"/>
+        <img src={star} className="star2 animated infinite bounce " alt="logo"/>
         <img src={hmm_emoji} className="hmm_emoji" alt="logo"/>
-        <img src={wow_emoji} className="wow_emoji" alt="logo"/>
+        <img src={wow_emoji} className="wow_emoji animated infinite bounceOutLeft delay-3s" alt="logo"/>
+        <img src={wow_emoji} className="wow_emoji animated infinite bounceInLeft  delay-3s" alt="logo"/>
 
         {/*<input type="file" onChange={(e) => setPhotoData(e.target.files[0])} accept="image/*;capture=camera" ></input>*/}
         <div className="content_container">

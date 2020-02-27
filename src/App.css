@@ -38,6 +38,7 @@ time, mark, audio, video {
 }
 
 .arm {
+  animation-duration: 2s!important;
   height: 15vw;
   width: 15vw;
   position: absolute;
@@ -60,6 +61,7 @@ time, mark, audio, video {
 }
 
 .arm2 {
+  animation-duration: 4s!important;
   height: 27vw;
   position: absolute;
   top: 12vw;
@@ -74,6 +76,7 @@ time, mark, audio, video {
 }
 
 .godzilla2 {
+  animation-duration: 3s!important;
   height: 25vw;
   position: absolute;
   bottom: 40vw;
@@ -117,6 +120,7 @@ time, mark, audio, video {
 }
 
 .star2 {
+  animation-duration: 3s!important;
   height: 10vw;
   position: absolute;
   bottom: 63vw;
@@ -125,6 +129,7 @@ time, mark, audio, video {
 }
 
 .wow_emoji {
+  animation-duration: 3s!important;
   height: 23vw;
   position: absolute;
   bottom: 69vw;

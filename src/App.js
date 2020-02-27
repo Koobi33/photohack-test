@@ -4,6 +4,7 @@ import StartPage from './pages/StartPage';
 import axios from 'axios';
 import WaitVideoPage from './pages/WaitVideoPage';
 import Loading from './components/Loading';
+import 'animate.css'
 
 function App() {
   const [page, setPage] = useState(null);
