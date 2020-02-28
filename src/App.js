@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css';
 import StartPage from './pages/StartPage';
 import axios from 'axios';
 import WaitVideoPage from './pages/WaitVideoPage';
 import Loading from './components/Loading';
-import 'animate.css'
+// import 'animate.css'
 
 function App() {
   const [page, setPage] = useState(null);
@@ -29,9 +30,11 @@ function App() {
     setPage(startPage);
   }, []);
   return (
-    <div className="content">
-      {page}
-    </div>
+    <Router>
+      <div className="content">
+        {page}
+      </div>
+    </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom'
+import { Link, BrowserRouter as Router, useHistory } from 'react-router-dom'
 import Loading from '../components/Loading';
 import './WaitVideoPage.css'
 import axios from 'axios';
@@ -8,10 +8,11 @@ import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
+  const history = useHistory();
   const [loading, setLoading] = useState(true);
 
-  const share = () => {
-    return callMethod('nativeShareCustom', {
+  const share = async () => {
+    return await callMethod('nativeShareCustom', {
       imageUrl: `https://se.ws.pho.to:5000/api/video/${videoId}.mp4`,
       providers: '[0,3,5,12]',
       close_after_share: 1,
@@ -53,8 +54,11 @@ const WaitVideoPage = (props) => {
                 src={url}>
         </iframe>
         <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
-        <button className="take_photo_button__label" onClick={() =>
-          `callback:nativeShareCustom?imageUrl=${url}&providers=[0,3,5,12]&func=shareVideo`}>
+        <button className="take_photo_button__label" onClick={async () => {
+          debugger;
+          const url = await share();
+          window.location.assign(url)
+        }}>
           SHARE1
         </button>
         <button className="take_photo_button__label" onClick={() => share()}>
