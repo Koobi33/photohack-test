@@ -24,7 +24,7 @@ const StartPage = (props) => {
     //   use_crop: 0,
     //   func: 'sendPhotos',
     // });
-    handlePhoto({ photos });
+    handlePhoto(photos);
   };
 
     return (
