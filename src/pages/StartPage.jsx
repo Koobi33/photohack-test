@@ -17,16 +17,9 @@ import { pickPictures } from '../services/lab';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
-  const [text, setText] = useState("test");
-
 
   const getPhoto = async () => {
     const photos = await pickPictures();
-    // const photos = await callMethod('nativePhotoSelect', {
-    //   use_crop: 0,
-    //   func: 'sendPhotos',
-    // });
-    setText(photos[0]);
     handlePhoto(photos[0].image_url);
   };
 
@@ -48,7 +41,6 @@ const StartPage = (props) => {
 
         <div className="content_container">
           <p className='call_text'>
-            {text.image_url}
             DON’T MISS<br/>
             YOUR CHANCE<br/>
             TO MESS UP<br/>
