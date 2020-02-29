@@ -12,7 +12,7 @@ function App() {
   const [page, setPage] = useState(null);
   const handlePhoto = async (photoData) => {
     setPage(<Loading />);
-    const link = photoData.photos[0].image_url;
+    const link = photoData;
     const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', link);
    if (resp.data) {
       setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
