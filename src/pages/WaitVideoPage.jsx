@@ -15,32 +15,17 @@ const WaitVideoPage = (props) => {
     }
   };
 
-  const url = 'http://se.ws.pho.to:5000/api/video/';
-  // const url = "https://www.youtube.com/embed/mPVDGOVjRQ0";
-  // useInterval(async () => {
-  //   if (loading && videoId) {
-  //     const videoResp = await axios.get(`http://se.ws.pho.to:5000/api/video/${videoId}.mp4`);
-  //     if (videoResp) {
-  //       setLoading(false);
-  //     }
-  //   }
-  // }, 4000);
-  //
-  // useEffect(() => {
-  //   if (videoId) {
-  //     setLoading(false);
-  //   }
-  // }, [videoId]);
+  const getVideoId = (id) => {
+      return 'https' + id.slice(4);
+  };
   const goHome = () => {
     setPage(startPage);
   };
 
   return (<div className="wait_page">
-    {videoId}
-    {/*<iframe width="420" height="315"*/}
-    {/*  src={`${videoId}`}>*/}
-    {/*        src={url}>*/}
-    {/*</iframe>*/}
+    <iframe width="420" height="315"
+      src={getVideoId(videoId)}>
+    </iframe>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
