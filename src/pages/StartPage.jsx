@@ -21,10 +21,12 @@ const StartPage = (props) => {
     setTest(true);
     handlePhoto(data);
   }
+  // eslint-disable-next-line no-undef
+  Android.myFunction('sendPhotos');
   const getPhoto = async () => {
     return await callMethod('nativePhotoSelect', {
       use_crop: 0,
-      func: 'sendPhotos()',
+      func: 'sendPhotos',
     });
   };
 
