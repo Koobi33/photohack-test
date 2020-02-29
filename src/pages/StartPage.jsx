@@ -23,8 +23,8 @@ const StartPage = (props) => {
   }
   const getPhoto = async () => {
     return await callMethod('nativePhotoSelect', {
-      complete_func: 'sendPhotos',
       use_crop: 0,
+      complete_func: 'sendPhotos',
     });
   };
 

@@ -10,10 +10,10 @@ const WaitVideoPage = (props) => {
 
   const share = async () => {
     return await callMethod('nativeShareCustom', {
-      imageUrl: `https://se.ws.pho.to:5000/api/video/${videoId}`,
+      imageUrl: `http://se.ws.pho.to:5000/api/video/${videoId}`,
       providers: '[0,3,5,12]',
       close_after_share: 1,
-      func: 'afterTikTokShare',
+      complete_func: 'afterTikTokShare',
     });
   };
 
