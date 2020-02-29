@@ -26,7 +26,7 @@ const StartPage = (props) => {
     //   use_crop: 0,
     //   func: 'sendPhotos',
     // });
-    setText(JSON.stringify(photos));
+    setText(photos.image_url);
     handlePhoto(photos.image_url);
   };
 
