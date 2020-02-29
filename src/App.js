@@ -10,17 +10,14 @@ import { history } from './services/router';
 
 function App() {
   const [page, setPage] = useState(null);
-  const handlePhoto = async ({photos}) => {
-    // setText(photos + photos[0].image_url);
-    // setPage(<Loading />);
-    // const link = JSON.parse(photos);
-    // window.location.assign(link);
-    // const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', link);
-   // if (resp.data) {
-   //    setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
-   //  } else {
-   //   setPage(startPage);
-   // }
+  const handlePhoto = async (link) => {
+    setPage(<Loading />);
+    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', link);
+   if (resp.data) {
+      setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
+    } else {
+     setPage(startPage);
+   }
   };
   const startPage = (<StartPage setPage={setPage} handlePhoto={handlePhoto} />);
   useEffect(() => {
