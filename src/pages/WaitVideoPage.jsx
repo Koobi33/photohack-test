@@ -15,16 +15,13 @@ const WaitVideoPage = (props) => {
     }
   };
 
-  const getVideoId = (id) => {
-      return 'https' + id.slice(5);
-  };
   const goHome = () => {
     setPage(startPage);
   };
 
   return (<div className="wait_page">
     <iframe width="420" height="315"
-      src={getVideoId(videoId)}>
+      src={videoId}>
     </iframe>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
