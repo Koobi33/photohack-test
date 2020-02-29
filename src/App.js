@@ -11,8 +11,7 @@ function App() {
   const [page, setPage] = useState(null);
   const handlePhoto = async (link) => {
     setPage(<Loading />);
-    await axios.get('http://se.ws.pho.to:5000/api/photo/test');
-    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', {
+    const resp = await axios.post('https://se.ws.pho.to:5000/api/photo/upload-url', {
       image_url: link,
     });
    if (resp.data) {

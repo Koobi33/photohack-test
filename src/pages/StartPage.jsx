@@ -22,7 +22,6 @@ const StartPage = (props) => {
   const [visible, setVisible] = useState(false);
 
   const getPhoto = async () => {
-    await axios.get('http://se.ws.pho.to:5000/api/photo/test');
     const photos = await pickPictures();
     handlePhoto(photos[0].image_url);
     setVisible(false);
