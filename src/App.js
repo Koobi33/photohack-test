@@ -12,8 +12,8 @@ function App() {
   const [page, setPage] = useState(null);
   const handlePhoto = async (photos) => {
     const data = new FormData();
-    const link = photos;
-    data.append('test', link);
+    const link = JSON.parse(photos);
+    data.append('test', link.photos[0].image_url);
     setPage(<Loading />);
     const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', data);
    if (resp.data) {
