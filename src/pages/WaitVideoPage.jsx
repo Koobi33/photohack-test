@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import Loading from '../components/Loading';
+import React from 'react';
 import './WaitVideoPage.css'
 import axios from 'axios';
 import { shareResult } from '../services/lab';
@@ -20,9 +19,10 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    <iframe width="420" height="315"
-      src={videoId}>
-    </iframe>
+    {/*<iframe width="420" height="315"*/}
+    {/*  src={videoId}>*/}
+    {/*</iframe>*/}
+    {videoId}
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
