@@ -12,10 +12,21 @@ import star from '../images/star.png';
 import godzilla2 from '../images/godzilla2.png';
 import hmm_emoji from '../images/hmm_emoji.png';
 import wow_emoji from '../images/wow_emoji.png';
+import {callMethod} from '../services/utils';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
   const [photoData, setPhotoData] = useState(null);
+  function test() {
+    console.log('test');
+  }
+
+  const getPhoto = async () => {
+    return await callMethod('nativePhotoSelect', {
+      close_after_share: 1,
+      func: 'test',
+    });
+  };
 
   useEffect(() => {
     if (photoData) {
@@ -55,7 +66,12 @@ const StartPage = (props) => {
             accept="image/*;capture=camera"
             className="take_photo_button"
           />
-          <label htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
+          <label
+            onClick={async () => {
+              const url = await getPhoto();
+              window.location.assign(url)
+            }}
+            htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
           <Router>
           <Link className="upload-btn text-center"
              to="callback:nativePhotoSelect?num_photos=4&amp;func=appUploaded">Choose photos</Link>

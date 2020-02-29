@@ -20,7 +20,7 @@ const WaitVideoPage = (props) => {
     });
   };
 
-  // const url = 'http://se.ws.pho.to:5000/api/video/';
+  // const url = 'https://se.ws.pho.to:5000/api/video/';
   const url = "https://www.youtube.com/embed/mPVDGOVjRQ0";
   useInterval(async () => {
     if (loading && videoId) {
@@ -55,7 +55,6 @@ const WaitVideoPage = (props) => {
         </iframe>
         <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
         <button className="take_photo_button__label" onClick={async () => {
-          debugger;
           const url = await share();
           window.location.assign(url)
         }}>
