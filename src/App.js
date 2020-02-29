@@ -10,9 +10,8 @@ import { history } from './services/router';
 
 function App() {
   const [page, setPage] = useState(null);
-  const [text, setText] = useState("test");
   const handlePhoto = async ({photos}) => {
-    setText(photos + photos[0].image_url);
+    // setText(photos + photos[0].image_url);
     setPage(<Loading />);
     // const link = JSON.parse(photos);
     // window.location.assign(link);
@@ -30,7 +29,6 @@ function App() {
   return (
     <Router>
       <div className="content">
-        <h1>{text}</h1>
         {page}
       </div>
     </Router>

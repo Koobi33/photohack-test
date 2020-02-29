@@ -17,6 +17,8 @@ import { pickPictures } from '../services/lab';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
+  const [text, setText] = useState("test");
+
 
   const getPhoto = async () => {
     const photos = await pickPictures();
@@ -24,6 +26,7 @@ const StartPage = (props) => {
     //   use_crop: 0,
     //   func: 'sendPhotos',
     // });
+    setText(JSON.stringify(photos));
     handlePhoto(photos);
   };
 
@@ -45,6 +48,7 @@ const StartPage = (props) => {
 
         <div className="content_container">
           <p className='call_text'>
+            {text}
             DON’T MISS<br/>
             YOUR CHANCE<br/>
             TO MESS UP<br/>
