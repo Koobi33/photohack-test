@@ -16,21 +16,22 @@ import {callMethod} from '../services/utils';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
+  const [test, setTest] = useState(false);
   function sendPhotos(data) {
+    setTest(true);
     handlePhoto(data);
   }
   const getPhoto = async () => {
     return await callMethod('nativePhotoSelect', {
       func: 'sendPhotos',
       use_crop: 0,
-
     });
   };
 
     return (
       <div>
         <img src={arm} className="arm animated infinite bounce delay-1s" alt="logo"/>
-        <img src={boss_glasses} className="boss_glasses animated infinite pulse delay-1s" alt="logo"/>
+        {test &&<img src={boss_glasses} className="boss_glasses animated infinite pulse delay-1s" alt="logo"/>}
         <img src={in_love_emoji} className="in_love_emoji animated infinite shake delay-1s" alt="logo"/>
         <img src={arm2} className="arm2 animated infinite bounce delay-1s" alt="logo"/>
         <img src={leg} className="leg animated infinite swing delay-1s" alt="logo"/>
