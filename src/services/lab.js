@@ -12,6 +12,23 @@ window.afterImagesPick = ({ photos }) => {
     RESOLVE_CALLBACK(photos);
 };
 
+window.shareVideo = (res) => {
+    if (res) {
+        RESOLVE_CALLBACK();
+    } else {
+        REJECT_CALLBACK();
+    }
+};
+
+export const shareResult = (videoId) => {
+    return callMethod('nativeShareCustom', {
+        imageUrl: `http://se.ws.pho.to:5000/api/video/${videoId}`,
+        providers: '[0,3,5,12]',
+        close_after_share: 1,
+        func: 'shareVideo',
+    });
+};
+
 export const pickPictures = () => {
     return callMethod('nativePhotoSelect', {num_photos: 0, func: 'afterImagesPick'});
 };

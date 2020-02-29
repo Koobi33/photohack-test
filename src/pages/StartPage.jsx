@@ -51,10 +51,7 @@ const StartPage = (props) => {
             WITH GODZILLA!<br/>
           </p>
           <label
-            onClick={async () => {
-              const url = await getPhoto();
-              window.location.assign(url)
-            }}
+            onClick={getPhoto}
             htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
         </div>
       </div>
