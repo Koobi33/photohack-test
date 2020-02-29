@@ -10,12 +10,9 @@ import 'animate.css'
 function App() {
   const [page, setPage] = useState(null);
   const handlePhoto = async (link) => {
-    const params = {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    };
+    await axios.get('http://se.ws.pho.to:5000/api/photo/test');
     setPage(<Loading />);
+    await axios.get('http://se.ws.pho.to:5000/api/photo/test');
     const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', {
       image_url: link,
     });
