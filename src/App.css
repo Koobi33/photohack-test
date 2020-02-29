@@ -24,7 +24,7 @@ time, mark, audio, video {
 }
 
 .content {
-  max-width: 450px;
+  /*max-width: 450px;*/
   overflow: hidden;
   height: 100%;
   background: rgb(244,41,179);
@@ -197,4 +197,25 @@ time, mark, audio, video {
   100% {
     transform: rotateZ(360deg);
   }
+}
+
+.modal {
+  background: linear-gradient(160deg, rgba(244,41,179,1) 0%, rgba(54,82,194,1) 100%);
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_text {
+  font-family: Gilroy-Heavy;
+  color: white;
+  font-size: 3vh;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+
+.t_pose_emoji {
+  width: 100%;
 }
