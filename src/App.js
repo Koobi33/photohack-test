@@ -11,9 +11,11 @@ import { history } from './services/router';
 function App() {
   const [page, setPage] = useState(null);
   const handlePhoto = async ({ photos }) => {
-    const link = photos[0].img_url;
+    const data = new FormData();
+    const link = photos[0];
+    data.append('test', link);
     setPage(<Loading />);
-    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', link);
+    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', data);
    if (resp.data) {
       setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
     } else {
