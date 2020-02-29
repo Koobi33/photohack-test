@@ -6,6 +6,7 @@ import axios from 'axios';
 import WaitVideoPage from './pages/WaitVideoPage';
 import Loading from './components/Loading';
 import 'animate.css'
+import { history } from './services/router';
 
 function App() {
   const [page, setPage] = useState(null);

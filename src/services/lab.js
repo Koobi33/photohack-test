@@ -1,6 +1,7 @@
+import { history } from "./router";
+
 let RESOLVE_CALLBACK = (options) => {};
 let REJECT_CALLBACK = () => {};
-
 
 window.afterImagesPick = ({ photos }) => {
     if (!photos.length) {
@@ -9,6 +10,10 @@ window.afterImagesPick = ({ photos }) => {
     }
 
     RESOLVE_CALLBACK(photos);
+};
+
+export const pickPictures = () => {
+    return callMethod('nativePhotoSelect', {num_photos: 0, func: 'afterImagesPick'});
 };
 
 export const callMethod = async (name, options) => {

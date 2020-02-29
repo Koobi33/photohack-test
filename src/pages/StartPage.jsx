@@ -12,26 +12,25 @@ import star from '../images/star.png';
 import godzilla2 from '../images/godzilla2.png';
 import hmm_emoji from '../images/hmm_emoji.png';
 import wow_emoji from '../images/wow_emoji.png';
-import {callMethod} from '../services/utils';
+import { callMethod } from '../services/lab';
+import { pickPictures } from '../services/lab';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
-  const [test, setTest] = useState(false);
-  function sendPhotos(data) {
-    setTest(true);
-    handlePhoto(data);
-  }
-  const getPhoto = () => {
-    return callMethod('nativePhotoSelect', {
-      use_crop: 0,
-      func: 'sendPhotos',
-    });
+
+  const getPhoto = async () => {
+    const photos = await pickPictures();
+    // const photos = await callMethod('nativePhotoSelect', {
+    //   use_crop: 0,
+    //   func: 'sendPhotos',
+    // });
+    handlePhoto({ photos });
   };
 
     return (
       <div>
         <img src={arm} className="arm animated infinite bounce delay-1s" alt="logo"/>
-        {test &&<img src={boss_glasses} className="boss_glasses animated infinite pulse delay-1s" alt="logo"/>}
+        <img src={boss_glasses} className="boss_glasses animated infinite pulse delay-1s" alt="logo"/>
         <img src={in_love_emoji} className="in_love_emoji animated infinite shake delay-1s" alt="logo"/>
         <img src={arm2} className="arm2 animated infinite bounce delay-1s" alt="logo"/>
         <img src={leg} className="leg animated infinite swing delay-1s" alt="logo"/>

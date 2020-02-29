@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Loading from '../components/Loading';
 import './WaitVideoPage.css'
 import axios from 'axios';
-import { callMethod } from '../services/utils';
+import { callMethod } from '../services/lab';
 import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
