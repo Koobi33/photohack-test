@@ -16,7 +16,7 @@ const WaitVideoPage = (props) => {
   };
 
   const getVideoId = (id) => {
-      return 'https' + id.slice(4);
+      return 'https' + id.slice(5);
   };
   const goHome = () => {
     setPage(startPage);
