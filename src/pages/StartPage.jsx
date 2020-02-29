@@ -14,6 +14,7 @@ import hmm_emoji from '../images/hmm_emoji.png';
 import wow_emoji from '../images/wow_emoji.png';
 import tpose from '../images/t-pose.png';
 import { pickPictures } from '../services/lab';
+import axios from 'axios';
 
 const StartPage = (props) => {
   const {handlePhoto} = props;
@@ -21,6 +22,7 @@ const StartPage = (props) => {
   const [visible, setVisible] = useState(false);
 
   const getPhoto = async () => {
+    await axios.get('http://se.ws.pho.to:5000/api/photo/test');
     const photos = await pickPictures();
     handlePhoto(photos[0].image_url);
     setVisible(false);
