@@ -6,7 +6,7 @@ import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
-  const url = 'https://youtu.be/3IVIiduNI5E';
+  const url = 'https://www.youtube.com/embed/V-C1tYLq8t8';
   const share = async () => {
     const res = await shareResult(url);
     if (res) {
