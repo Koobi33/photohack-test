@@ -8,7 +8,7 @@ const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
   const url = 'https://www.youtube.com/embed/V-C1tYLq8t8';
   const share = async () => {
-    const res = await shareResult(url);
+    const res = await shareResult(videoId);
     if (res) {
       goHome();
     }
