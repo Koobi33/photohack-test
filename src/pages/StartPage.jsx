@@ -26,7 +26,7 @@ const StartPage = (props) => {
     //   use_crop: 0,
     //   func: 'sendPhotos',
     // });
-    setText(photos.image_url);
+    setText(JSON.parse(JSON.stringify(photos)));
     handlePhoto(photos.image_url);
   };
 
@@ -48,7 +48,7 @@ const StartPage = (props) => {
 
         <div className="content_container">
           <p className='call_text'>
-            {text}
+            {text.image_url}
             DON’T MISS<br/>
             YOUR CHANCE<br/>
             TO MESS UP<br/>
