@@ -10,13 +10,13 @@ import { history } from './services/router';
 
 function App() {
   const [page, setPage] = useState(null);
-  const handlePhoto = async (photos) => {
-    const data = new FormData();
+  const [text, setText] = useState("test");
+  const handlePhoto = async ({photos}) => {
+    setText(photos + photos[0].image_url);
     const link = JSON.parse(photos);
     window.location.assign(link);
-    data.append('test', link);
     setPage(<Loading />);
-    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', data);
+    const resp = await axios.post('http://se.ws.pho.to:5000/api/photo/upload-url', link);
    if (resp.data) {
       setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
     } else {
@@ -30,6 +30,7 @@ function App() {
   return (
     <Router>
       <div className="content">
+        <h1>{text}</h1>
         {page}
       </div>
     </Router>
