@@ -16,22 +16,17 @@ import {callMethod} from '../services/utils';
 
 const StartPage = (props) => {
   const { handlePhoto } = props;
-  const [photoData, setPhotoData] = useState(null);
-  function test(keke) {
-    console.log('test', keke);
+  function sendPhotos(data) {
+    handlePhoto(data);
   }
-
   const getPhoto = async () => {
     return await callMethod('nativePhotoSelect', {
-      func: 'test',
+      func: 'sendPhotos',
+      use_crop: 0,
+
     });
   };
 
-  useEffect(() => {
-    if (photoData) {
-      handlePhoto(photoData);
-    }
-  }, [photoData]);
     return (
       <div>
         <img src={arm} className="arm animated infinite bounce delay-1s" alt="logo"/>
@@ -44,12 +39,10 @@ const StartPage = (props) => {
         <img src={bang} className="bang animated infinite heartBeat delay-1s" alt="logo"/>
         <img src={star} className="star animated infinite wobble delay-1s" alt="logo"/>
         <img src={godzilla2} className="godzilla2 animated infinite bounce " alt="logo"/>
-        <img src={star} className="star2 animated infinite bounce " alt="logo"/>
         <img src={hmm_emoji} className="hmm_emoji" alt="logo"/>
         <img src={wow_emoji} className="wow_emoji animated infinite bounceOutLeft delay-3s" alt="logo"/>
         <img src={wow_emoji} className="wow_emoji animated infinite bounceInLeft  delay-3s" alt="logo"/>
 
-        {/*<input type="file" onChange={(e) => setPhotoData(e.target.files[0])} accept="image/*;capture=camera" ></input>*/}
         <div className="content_container">
           <p className='call_text'>
             DON’T MISS<br/>
@@ -57,34 +50,12 @@ const StartPage = (props) => {
             TO MESS UP<br/>
             WITH GODZILLA!<br/>
           </p>
-          <input
-            id="photo"
-            name="photo"
-            type="file"
-            onChange={(e) => setPhotoData(e.target.files[0])}
-            accept="image/*;capture=camera"
-            className="take_photo_button"
-          />
           <label
             onClick={async () => {
               const url = await getPhoto();
-              alert(url);
               window.location.assign(url)
             }}
             htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
-          <label
-            onClick={async () => {
-              const url = await getPhoto();
-              alert(url);
-              window.location.assign(url)
-            }}
-            htmlFor="photo"
-            className="take_photo_button__label">TAKE A PHOTO2</label>
-
-          <Router>
-          <Link className="upload-btn text-center"
-             to="callback:nativePhotoSelect?num_photos=4&amp;func=appUploaded">Choose photos</Link>
-          </Router>
         </div>
       </div>
     );
