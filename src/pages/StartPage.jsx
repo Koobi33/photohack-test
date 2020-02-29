@@ -17,13 +17,12 @@ import {callMethod} from '../services/utils';
 const StartPage = (props) => {
   const { handlePhoto } = props;
   const [photoData, setPhotoData] = useState(null);
-  function test() {
-    console.log('test');
+  function test(keke) {
+    console.log('test', keke);
   }
 
   const getPhoto = async () => {
     return await callMethod('nativePhotoSelect', {
-      close_after_share: 1,
       func: 'test',
     });
   };
@@ -69,9 +68,19 @@ const StartPage = (props) => {
           <label
             onClick={async () => {
               const url = await getPhoto();
+              alert(url);
               window.location.assign(url)
             }}
             htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
+          <label
+            onClick={async () => {
+              const url = await getPhoto();
+              alert(url);
+              window.location.assign(url)
+            }}
+            htmlFor="photo"
+            className="take_photo_button__label">TAKE A PHOTO2</label>
+
           <Router>
           <Link className="upload-btn text-center"
              to="callback:nativePhotoSelect?num_photos=4&amp;func=appUploaded">Choose photos</Link>
