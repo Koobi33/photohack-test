@@ -15,7 +15,7 @@ function App() {
       image_url: link,
     });
    if (resp.data) {
-      setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={resp.data} />);
+      setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={JSON.stringify(resp.data)} />);
     } else {
      setPage(startPage);
    }
