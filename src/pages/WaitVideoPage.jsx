@@ -23,8 +23,8 @@ const WaitVideoPage = (props) => {
     {/*        src={videoId.download_url}  >*/}
     {/*</iframe>*/}
     <video  width="320" height="240">
-      <source src={videoId.stream_url} />
-      {/*<source src={videoId.download_url} type="video/mp4"/>*/}
+      {/*<source src={videoId.stream_url} />*/}
+      <source src={videoId.download_url} type="video/mp4"/>
     </video>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
