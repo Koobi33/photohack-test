@@ -22,8 +22,8 @@ function App() {
   };
   const startPage = (<StartPage setPage={setPage} handlePhoto={handlePhoto} />);
   useEffect(() => {
-    setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={null} />);
-    // setPage(startPage);
+    // setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={null} />);
+    setPage(startPage);
   }, []);
   return (
     <Router>
