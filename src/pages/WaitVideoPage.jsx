@@ -6,9 +6,12 @@ import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
-  // const url = 'https://www.youtube.com/embed/V-C1tYLq8t8';
+  const url = 'https://se.ws.pho.to:5000/api/video/get-stream/867ebab2-844a-4332-a419-7d0ca5a72a25';
   const share = async () => {
-    const res = await shareResult(videoId);
+    const res = await shareResult({
+      stream_url: url,
+      download_url: url,
+    });
     if (res) {
       goHome();
     }
@@ -23,7 +26,7 @@ const WaitVideoPage = (props) => {
     {/*  src={videoId}>*/}
     {/*</iframe>*/}
     {/*{videoId}*/}
-    <video src={videoId.stream_url} width="320" height="240" autoPlay={true}/>
+    <video src={url} width="320" height="240" autoPlay={true}/>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
