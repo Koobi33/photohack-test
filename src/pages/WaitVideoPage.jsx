@@ -20,7 +20,7 @@ const WaitVideoPage = (props) => {
 
   return (<div className="wait_page">
     <iframe width="420" height="315"
-            src={videoId.stream_url} >
+            src={videoId.download_url}  >
     </iframe>
     {/*<video  width="320" height="240" loop autoPlay={true}>*/}
     {/*  <source src={videoId.download_url} type="video/mp4"/>*/}
