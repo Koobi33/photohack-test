@@ -6,7 +6,7 @@ import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
-  const url = 'https://www.youtube.com/embed/V-C1tYLq8t8';
+  // const url = 'https://www.youtube.com/embed/V-C1tYLq8t8';
   const share = async () => {
     const res = await shareResult(videoId);
     if (res) {
@@ -19,11 +19,11 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    {/*<iframe width="420" height="315"*/}
-    {/*  src={url}>*/}
-    {/*</iframe>*/}
+    <iframe width="420" height="315"
+      src={videoId}>
+    </iframe>
     {/*{videoId}*/}
-    <video src={url} width="320" height="240" controls autoPlay={true}/>
+    <video src={videoId} width="320" height="240" controls autoPlay={true}/>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
