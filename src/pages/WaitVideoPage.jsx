@@ -17,7 +17,7 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    <video  width="320" height="240" autoPlay={true} controls loop>
+    <video  autoPlay={true} controls loop>
       <source src={videoId.download_url} type="video/mp4"/>
     </video>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
