@@ -20,7 +20,7 @@ const WaitVideoPage = (props) => {
   return (<div className="wait_page">
     <video  width="320" height="240" loop autoPlay={true}>
       <source src={videoId.download_url} type="video/mp4"/>
-      <source src={videoId.stream_url} type="video/mp4"/>
+      {/*<source src={videoId.stream_url} type="video/mp4"/>*/}
     </video>
 
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
