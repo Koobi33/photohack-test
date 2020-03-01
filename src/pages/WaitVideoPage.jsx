@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './WaitVideoPage.css'
-import axios from 'axios';
 import { shareResult } from '../services/lab';
-import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
@@ -19,11 +17,7 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    {/*<iframe width="420" height="315"*/}
-    {/*        src={videoId.download_url}  >*/}
-    {/*</iframe>*/}
-    <video  width="320" height="240">
-      {/*<source src={videoId.stream_url} />*/}
+    <video  width="320" height="240" autoPlay={true} controls loop>
       <source src={videoId.download_url} type="video/mp4"/>
     </video>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>

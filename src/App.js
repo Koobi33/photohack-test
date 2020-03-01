@@ -22,7 +22,9 @@ function App() {
   };
   const startPage = (<StartPage setPage={setPage} handlePhoto={handlePhoto} />);
   useEffect(() => {
-    // setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={null} />);
+    // setPage(<WaitVideoPage setPage={setPage} startPage={startPage} videoId={{
+    //   download_url: 'https://se.ws.pho.to:5000/api/video/get-stream/23511a9d-9e2e-45f1-8e88-772f3182b402'
+    // }} />);
     setPage(startPage);
   }, []);
   return (
