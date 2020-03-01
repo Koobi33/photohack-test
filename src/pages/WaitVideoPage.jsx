@@ -19,9 +19,9 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    <iframe width="420" height="315"
-      src={videoId}>
-    </iframe>
+    {/*<iframe width="420" height="315"*/}
+    {/*  src={videoId}>*/}
+    {/*</iframe>*/}
     {/*{videoId}*/}
     <video src={videoId} width="320" height="240" controls autoPlay={true}/>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
