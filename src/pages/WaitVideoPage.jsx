@@ -26,7 +26,7 @@ const WaitVideoPage = (props) => {
       {/*<source src={videoId.stream_url} type="video/mp4"/>*/}
       {/*<source src={videoId.download_url} type="video/mp4"/>*/}
     {/*</video>*/}
-    {videoId}
+    {JSON.stringify(videoId) || JSON.parse(JSON.stringify(videoId))}
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
