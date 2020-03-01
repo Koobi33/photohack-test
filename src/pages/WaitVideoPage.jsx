@@ -23,7 +23,7 @@ const WaitVideoPage = (props) => {
     {/*  src={videoId}>*/}
     {/*</iframe>*/}
     {/*{videoId}*/}
-    <video src={videoId} width="320" height="240" controls autoPlay={true}/>
+    <video src={videoId} width="320" height="240" autoPlay={true}/>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
