@@ -20,7 +20,7 @@ window.shareVideo = (res) => {
 
 export const shareResult = (videoId) => {
     return callMethod('nativeShareCustom', {
-        imageUrl: videoId.stream_url,
+        imageUrl: videoId.download_url,
         // url: videoId.stream_url,
         close_after_share: 1,
         providers: '[0,3,5,12]',
