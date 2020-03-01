@@ -6,14 +6,9 @@ import useInterval from 'use-interval'
 
 const WaitVideoPage = (props) => {
   const {videoId, setPage, startPage} = props;
-  const [video, setVideo] = useState(null);
-
-  useEffect(() => {
-    setVideo(JSON.stringify(videoId));
-  }, [videoId]);
 
   const share = async () => {
-    const res = await shareResult(video);
+    const res = await shareResult(videoId);
     if (res) {
       goHome();
     }
@@ -24,9 +19,8 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
-    {video}
     <video  width="320" height="240" loop autoPlay={true}>
-      <source src={video.download_url} type="video/mp4"/>
+      <source src={videoId.download_url} type="video/mp4"/>
       {/*<source src={videoId.stream_url} type="video/mp4"/>*/}
     </video>
 
