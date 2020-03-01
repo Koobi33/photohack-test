@@ -58,7 +58,7 @@ const StartPage = (props) => {
 
       <div className="content_container">
         <p className='call_text'>
-          220DON’T MISS<br/>
+          219DON’T MISS<br/>
           YOUR CHANCE<br/>
           TO MESS UP<br/>
           WITH GODZILLA!<br/>
