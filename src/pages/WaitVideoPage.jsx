@@ -9,7 +9,7 @@ const WaitVideoPage = (props) => {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
-    setVideo(JSON.parse(videoId));
+    setVideo(JSON.stringify(videoId));
   }, [videoId]);
 
   const share = async () => {
@@ -24,6 +24,7 @@ const WaitVideoPage = (props) => {
   };
 
   return (<div className="wait_page">
+    {video}
     <video  width="320" height="240" loop autoPlay={true}>
       <source src={video.download_url} type="video/mp4"/>
       {/*<source src={videoId.stream_url} type="video/mp4"/>*/}
