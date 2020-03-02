@@ -34,7 +34,7 @@ time, mark, audio, video {
 .call_text {
   font-family: Gilroy-Heavy;
   color: white;
-  font-size: 3vh;
+  font-size: 4vh;
   letter-spacing: 1.3px;
 }
 
@@ -133,19 +133,20 @@ time, mark, audio, video {
   animation-duration: 3s!important;
   height: 23vw;
   position: absolute;
-  bottom: 69vw;
+  bottom: 80vw;
   left: 12vw;
 }
 
 .content_container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 70%;
-  height: 50vw;
+  width: 90%;
+  height: 75vw;
   padding-left: 2vw;
   padding-bottom: 2vw;
 }
@@ -219,6 +220,14 @@ time, mark, audio, video {
   font-family: Gilroy-Heavy;
   color: lightgray;
   font-size: 2vh;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+
+.loading_text {
+  font-family: Gilroy-Heavy;
+  color: white;
+  font-size: 4vh;
   letter-spacing: 1.3px;
   text-align: center;
 }

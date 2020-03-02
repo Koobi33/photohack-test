@@ -1433,6 +1433,11 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
+"@use-it/interval@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@use-it/interval/-/interval-0.1.3.tgz#5d1096b2295d7a5dda8e8022f3abb5f9d9ef27f8"
+  integrity sha512-chshdtDZTFoWA9aszBz1Cc04Ca9NBD2JTi/GMjdJ+HGm4q7Vy1v71+2mm22r7Kfb2nYW+lTRsPcEHdB/VFVHsQ==
+
 "@videojs/http-streaming@1.10.6":
   version "1.10.6"
   resolved "https://registry.yarnpkg.com/@videojs/http-streaming/-/http-streaming-1.10.6.tgz#a9119b1828b354c5cc17b42ea051cc7bcce2dca0"

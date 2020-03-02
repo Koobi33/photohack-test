@@ -58,14 +58,21 @@ const StartPage = (props) => {
 
       <div className="content_container">
         <p className='call_text'>
-          DON’T MISS<br/>
-          YOUR CHANCE<br/>
-          TO MESS UP<br/>
-          WITH GODZILLA!<br/>
+          CAN YOU DEFEAT<br/>
+          THE MONSTER?<br/>
+          OR YOU DESERVE<br/>
+          ANOTHER ADVENTURE...<br/>
+          {/*DON’T MISS<br/>*/}
+          {/*YOUR CHANCE<br/>*/}
+          {/*TO MESS UP<br/>*/}
+          {/*WITH GODZILLA!<br/>*/}
         </p>
+        {/*<label*/}
+        {/*  onClick={() => setVisible(true)}*/}
+        {/*  htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>*/}
         <label
           onClick={() => setVisible(true)}
-          htmlFor="photo" className="take_photo_button__label">TAKE A PHOTO</label>
+          htmlFor="photo" className="take_photo_button__label">TEST YOURSELF</label>
       </div>
     </div>
     }

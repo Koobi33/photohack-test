@@ -26,6 +26,7 @@ function App() {
     //   download_url: 'https://se.ws.pho.to:5000/api/video/get-stream/23511a9d-9e2e-45f1-8e88-772f3182b402'
     // }} />);
     setPage(startPage);
+    // setPage(<Loading />);
   }, []);
   return (
     <Router>
