@@ -23,7 +23,7 @@ export const shareResult = (videoId) => {
         imageUrl: videoId.download_url,
         // url: videoId.stream_url,
         close_after_share: 1,
-        providers: '[0,3,5,12]',
+        providers: '[12,11,1,2,3,6,5,0,9]',
         func: 'shareVideo',
     });
 };
