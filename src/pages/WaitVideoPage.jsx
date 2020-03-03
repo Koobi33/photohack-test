@@ -20,6 +20,7 @@ const WaitVideoPage = (props) => {
     <video  width="420" height="340" autoPlay={true} controls loop>
       <source src={videoId.download_url} type="video/mp4"/>
     </video>
+    <p className="loading_text">YOU CAN TRY GET VIDEO WITH ANOTHER ADVENTURE</p>
     <button className="take_photo_button__label" onClick={goHome}>TRY AGAIN</button>
     <button className="take_photo_button__label" onClick={share}>
       SHARE
